@@ -55,20 +55,20 @@ class App extends Component {
     return (
       <div className="App">
         <a href='http://localhost:8888'>
-          <button>Login With Spotify</button>
+          <button className = "button">Login With Spotify</button>
         </a>
-        <div>Now Playing: {this.state.nowPlaying.name }</div>
+        <div><h1>Now Playing: {this.state.nowPlaying.name }</h1></div>
         <div><img className ="img1" src= {this.state.nowPlaying.image } /></div>
         <div><h2>My Playlists</h2>
         <ul>
           {display}
         </ul>
         </div>
-        <button onClick={() => this.getMyPlaylists()}>
+        <button className = "button" onClick={() => this.getMyPlaylists()}>
           Get My Playlists
         </button>
         <br></br>
-        <button onClick={() => this.getNowPlaying()}>
+        <button className = "button" onClick={() => this.getNowPlaying()}>
           Get Now Playing
         </button>
       </div>
