@@ -39,3 +39,10 @@
 div, buton {
   margin: 15px;
 }
+
+img1{
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

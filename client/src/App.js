@@ -57,14 +57,9 @@ class App extends Component {
         <a href='http://localhost:8888'>
           <button>Login With Spotify</button>
         </a>
-        <div>
-          Now Playing: {this.state.nowPlaying.name }
-        </div>
-        <div>
-          <img src= {this.state.nowPlaying.image } style={{ width: 100}} />
-        </div>
-        <div>
-        <h2>My Playlists</h2>
+        <div>Now Playing: {this.state.nowPlaying.name }</div>
+        <div><img className ="img1" src= {this.state.nowPlaying.image } /></div>
+        <div><h2>My Playlists</h2>
         <ul>
           {display}
         </ul>
