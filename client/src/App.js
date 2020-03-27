@@ -12,7 +12,8 @@ class App extends Component {
       nowPlaying: {
         name: 'Not Checked', 
         image: ''
-      }
+      },
+      myPlaylists: []
     }
     if (params.access_token) {
       spotifyWebApi.setAccessToken(params.access_token);
@@ -27,7 +28,6 @@ class App extends Component {
     }
     return hashParams;
   }
-
   getNowPlaying() {
     spotifyWebApi.getMyCurrentPlaybackState()
     .then((response) => {
@@ -39,8 +39,19 @@ class App extends Component {
       });
     })
   }
+  getMyPlaylists() {
+    spotifyWebApi.getUserPlaylists()
+    .then((response) => {
+      this.setState({
+        myPlaylists: response.items,
+      });
+    })
+  }
 
   render() {
+    const display = this.state.myPlaylists.map((playlist) => 
+      <li>{playlist.name}</li>
+    );
     return (
       <div className="App">
         <a href='http://localhost:8888'>
@@ -52,8 +63,18 @@ class App extends Component {
         <div>
           <img src= {this.state.nowPlaying.image } style={{ width: 100}} />
         </div>
+        <div>
+        <h2>My Playlists</h2>
+        <ul>
+          {display}
+        </ul>
+        </div>
+        <button onClick={() => this.getMyPlaylists()}>
+          Get My Playlists
+        </button>
+        <br></br>
         <button onClick={() => this.getNowPlaying()}>
-          Check Now Playing
+          Get Now Playing
         </button>
       </div>
     );
