@@ -39,3 +39,38 @@
 div, buton {
   margin: 15px;
 }
+
+.img1{
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button 
+{
+    background-color: rgb(69, 160, 72);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: monospace;
+  }
+
+  .playlist{
+       background: #BFF9C2;
+       padding: 5px;
+       margin-left: 35px;
+       font-family: monospace;
+       font-style: oblique;
+       font-size: x-large;
+       list-style-type:none;
+  }
+
+/** code written by Serra Jung and Sarah Oh
+reference: w3schools and bootstrap**/

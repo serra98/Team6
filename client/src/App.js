@@ -50,30 +50,22 @@ class App extends Component {
 
   render() {
     const display = this.state.myPlaylists.map((playlist) => 
-      <li>{playlist.name}</li>
+      <div className = "playlist"><ul><li>{playlist.name}</li></ul></div>
     );
     return (
       <div className="App">
         <a href='http://localhost:8888'>
-          <button>Login With Spotify</button>
+          <button className = "button">Login With Spotify</button>
         </a>
-        <div>
-          Now Playing: {this.state.nowPlaying.name }
-        </div>
-        <div>
-          <img src= {this.state.nowPlaying.image } style={{ width: 100}} />
-        </div>
-        <div>
+        <div><h1>Now Playing: {this.state.nowPlaying.name }</h1></div>
+        <div><img className ="img1" src= {this.state.nowPlaying.image } /></div>
         <h2>My Playlists</h2>
-        <ul>
-          {display}
-        </ul>
-        </div>
-        <button onClick={() => this.getMyPlaylists()}>
+        <div className= "playlist">{display} </div>
+        <button className = "button" onClick={() => this.getMyPlaylists()}>
           Get My Playlists
         </button>
         <br></br>
-        <button onClick={() => this.getNowPlaying()}>
+        <button className = "button" onClick={() => this.getNowPlaying()}>
           Get Now Playing
         </button>
       </div>
@@ -82,3 +74,12 @@ class App extends Component {
 }
 
 export default App;
+//code sources 
+/**
+ *https://github.com/jonnyk20/spotify-node-react-starter-kit
+- https://medium.com/@jonnykalambay/now-playing-using-spotifys-awesome-api-with-react-7db8173a7b13
+ Videos and websites we looked over to get more information: 
+  https://www.youtube.com/watch?v=f5OLDvwP-Ug
+  w3schools.com and react.org
+  set up/code written by Sarah Oh and Serra Jung 
+ */
