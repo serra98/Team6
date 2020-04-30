@@ -50,7 +50,7 @@ class App extends Component {
 
   render() {
     const display = this.state.myPlaylists.map((playlist) => 
-      <li>{playlist.name}</li>
+      <div className = "playlist"><ul><li>{playlist.name}</li></ul></div>
     );
     return (
       <div className="App">
@@ -59,11 +59,8 @@ class App extends Component {
         </a>
         <div><h1>Now Playing: {this.state.nowPlaying.name }</h1></div>
         <div><img className ="img1" src= {this.state.nowPlaying.image } /></div>
-        <div><h2>My Playlists</h2>
-        <ul>
-          {display}
-        </ul>
-        </div>
+        <h2>My Playlists</h2>
+        <div className= "playlist">{display} </div>
         <button className = "button" onClick={() => this.getMyPlaylists()}>
           Get My Playlists
         </button>

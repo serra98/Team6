@@ -59,4 +59,15 @@ div, buton {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    font-family: monospace;
+  }
+
+  .playlist{
+       background: #BFF9C2;
+       padding: 5px;
+       margin-left: 35px;
+       font-family: monospace;
+       font-style: oblique;
+       font-size: x-large;
+       list-style-type:none;
   }
