@@ -74,3 +74,12 @@ class App extends Component {
 }
 
 export default App;
+//code sources 
+/**
+ *https://github.com/jonnyk20/spotify-node-react-starter-kit
+- https://medium.com/@jonnykalambay/now-playing-using-spotifys-awesome-api-with-react-7db8173a7b13
+ Videos and websites we looked over to get more information: 
+  https://www.youtube.com/watch?v=f5OLDvwP-Ug
+  w3schools.com and react.org
+  set up/code written by Sarah Oh and Serra Jung 
+ */
